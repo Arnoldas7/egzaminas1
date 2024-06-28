@@ -23,7 +23,7 @@ class PostController extends Controller
         $request->validate([
             'title' => 'required|string|max:255',
             'content' => 'required|string',
-            ''=> '',
+          
         ]);
 
         Post::create($request->only(['title', 'content']));
